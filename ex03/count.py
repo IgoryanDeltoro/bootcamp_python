@@ -19,12 +19,13 @@ def text_analyzer(text=None):
     if text.isdigit():
         print("AssertionError: argument is not a string")
         return
-    
+
     total_chars = len(text)
     upper_count = sum(1 for char in text if char.isupper())
     lower_count = sum(1 for char in text if char.islower())
     punct_count = sum(1 for char in text if char in string.punctuation)
     space_count = sum(1 for char in text if char.isspace())
+
     print(f"The text contains {total_chars} printable character(s):")
     print(f"- {upper_count} upper letter(s)")
     print(f"- {lower_count} lower letter(s)")
@@ -32,8 +33,7 @@ def text_analyzer(text=None):
     print(f"- {space_count} space(s)")
 
 
-
-if __name__=="__main__":
+if __name__ == "__main__":
     args = sys.argv[1:]
     if len(args) == 1:
         text_analyzer(args[0])

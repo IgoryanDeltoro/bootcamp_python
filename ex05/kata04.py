@@ -1,7 +1,11 @@
 kata = (0, 4, 132.42222, 10000, 12345.67)
 
+
 def main():
     """
+    The kata variable is always a tuple that contains 5
+    non-negative integers. The first integer contains up
+    to 4 digits, the rest up to 2 digits.
     """
 
     mod = kata[0]
@@ -10,7 +14,9 @@ def main():
     num2 = kata[3]
     num3 = kata[4]
 
-    print(f"module_{mod:02d}, ex_{ex:02d} : {num1:.2f}, {num2:.2e}, {num3:.2e}")
+    print(f"module_{mod:02d}, ex_{ex:02d} :"
+          f"{num1:.2f}, {num2:.2e}, {num3:.2e}")
 
-if __name__=="__main__":
+
+if __name__ == "__main__":
     main()
